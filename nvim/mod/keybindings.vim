@@ -5,7 +5,7 @@ nnoremap <leader>0 :call ToggleNumber() <CR>
 
 nnoremap <leader>1 :set relativenumber!<CR>
 
-nmap . :
+nnoremap ; :
 nmap <C-]> <C-w>g]
 nmap <C-t> <C-w>T<CR>
 nmap <leader>w :set wrap!<CR>
@@ -18,26 +18,30 @@ cnoremap <c-v> <c-r>0
 nnoremap j gj
 nnoremap k gk
 
-nnoremap B ^
-nnoremap E $
+map B ^
+map E $
 
 nmap <BS> :noh<CR>
 nmap <leader>s :source ~/.config/nvim/init.vim<CR>
 
-noremap <leader>b :buffers<CR>:buffer 
-noremap <leader>p :bp<CR>
-noremap <leader>n :bn<CR>
+nmap <leader>; :Buffers<CR>
+"noremap <leader>b :buffers<CR>:buffer 
+"noremap <leader>p :bp<CR>
+"noremap <leader>n :bn<CR>
+nnoremap <leader><leader> <c-^>
 
-nmap s <S-*><CR>
+"nmap s <S-*><CR>
 "nmap e $
 
 " you can also use <leader> <num> to switch to tab
-nmap <C-Right> :tabn<CR>
-nmap <C-Left> :tabp<CR>
+"nmap <C-Right> :tabn<CR>
+"nmap <C-Left> :tabp<CR>
+nmap <C-Right> <nop>
+nmap <C-Left> <nop>
 
 "move page
-"nmap <leader><Down> <C-f><CR>
-"nmap <leader><Up> <C-b><CR>
+nmap f <C-f><CR>
+nmap b <C-b><CR>
 
 "split window nav
 "nmap <A-Down> <C-w><Down><CR>
@@ -50,6 +54,8 @@ nnoremap <leader><Up> <C-w><Up><CR>
 nnoremap <leader><Right> <C-w><Right><CR>
 nnoremap <leader><Left> <C-w><Left><CR>
 
+"nmap <A-S-Right> :tabm +1<CR>
+"nmap <A-S-Left>  :tabm -1<CR>
 
 "move split windows
 nmap <leader>h <C-w>K<CR>
@@ -60,18 +66,17 @@ nmap <leader>v <C-w>H<CR>
 "nnoremap <down> <nop>
 "nnoremap <left> :tabp<CR> 
 "nnoremap <right> :tabn<CR> 
-"
-"nnoremap <up> <nop>
-"nnoremap <down> <nop>
-"inoremap <up> <nop>
-"inoremap <down> <nop>
-"inoremap <left> <nop>
-"inoremap <right> <nop>
-"nnoremap <left> :tabp<CR> 
-"nnoremap <right> :tabn<CR> 
 
-""" Custom Function """
-"open correcponding .h file
+nnoremap . <nop>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> :tabp<CR> 
+nnoremap <right> :tabn<CR> 
+
+vnoremap <up> <nop>
+vnoremap <down> <nop>
+vnoremap <left> <nop>
+vnoremap <right> <nop>
 
 "move split windows
 nmap <leader>h <C-w>K<CR>
@@ -82,19 +87,8 @@ nmap <leader>v <C-w>H<CR>
 " gT -> move to prev tab
 " <num>gt -> exec gt <num> times
 " <num>gT -> exec gT <num> times
-"noremap <leader>1 1gt
-noremap <leader>2 2gt
-noremap <leader>3 3gt
-noremap <leader>4 4gt
-noremap <leader>5 5gt
-noremap <leader>6 6gt
-noremap <leader>7 7gt
-noremap <leader>8 8gt
-noremap <leader>9 9gt
-"noremap <leader>0 :tablast<cr>
 
 " Go to last active tab
-
 au TabLeave * let g:lasttab = tabpagenr()
 nnoremap <silent> <c-l> :exe "tabn ".g:lasttab<cr>
 vnoremap <silent> <c-l> :exe "tabn ".g:lasttab<cr>

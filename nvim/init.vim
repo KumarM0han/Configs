@@ -12,6 +12,7 @@ source ~/.config/nvim/mod/plugins.vim
 
 "config plusings
 source ~/.config/nvim/mod/plugin-config.vim
+
 "set laststatus=2
 "hi StatusLine ctermfg=Black ctermbg=Black
 "hi StatusLine ctermfg=DarkGray ctermbg=Black
@@ -23,9 +24,11 @@ source ~/.config/nvim/mod/plugin-config.vim
 "hi Normal ctermbg=NONE
 
 "let g:ayucolor="light/mirage/dark"
-let g:ayucolor="light"
 set background=dark
+
 let g:everforest_background = 'hard'
 let g:everforest_better_performance = 1
-let g:airline_theme = 'everforest'
-colorscheme everforest
+let g:airline_theme = 'gruvbox'
+let g:ayucolor="light"
+
+colorscheme gruvbox

@@ -20,6 +20,9 @@ set showmatch
 set termguicolors
 set ruler
 set cmdheight=1
+set scrolloff=2
+set noshowmode
+set backspace=2 " Backspace over newlines
 
 set tabstop=4
 set shiftwidth=4
@@ -45,7 +48,23 @@ set complete-=i
 "imap <c-x><c-k> <plug>(fzf-complete-word)
 "imap <c-x><c-l> <plug>(fzf-complete-line)
 
+" Wrapping options
+set formatoptions=tc " wrap text and comments using textwidth
+set formatoptions+=r " continue comments when pressing ENTER in I mode
+set formatoptions+=q " enable formatting of comments with gq
+set formatoptions+=n " detect lists for formatting
+set formatoptions+=b " auto-wrap in insert mode, and do not wrap old long lines
+
+" Search results centered please
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+
+
 set tags=./tags;,tags;
+
 "function! UpdateTags()
 "  execute ":!/usr/bin/ctags -R --languages=C++ --c++-kinds=+p --fields=+iaS --extra=+q ./"
 "  echohl StatusLine | echo "C/C++ tag updated" | echohl None
@@ -55,3 +74,15 @@ set tags=./tags;,tags;
 "set foldmethod=syntax
 "se foldlevel=0
 "set foldnestmax=1
+
+
+set diffopt+=iwhite " No whitespace in vimdiff
+set diffopt+=algorithm:patience
+set diffopt+=indent-heuristic
+au TextYankPost * silent! lua vim.highlight.on_yank() " Highlight yank
+
+" Jump to last edit position on opening file
+if has("autocmd")
+  " https://stackoverflow.com/questions/31449496/vim-ignore-specifc-file-in-autocommand
+  au BufReadPost * if expand('%:p') !~# '\m/\.git/' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
