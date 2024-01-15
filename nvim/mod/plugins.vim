@@ -9,6 +9,7 @@ Plug 'sainnhe/everforest'
 "Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-rooter'
 Plug 'itchyny/lightline.vim'
+Plug 'muxcmux/gruvbox-lightline'
 
 "Plug 'olimorris/onedarkpro.nvim'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}

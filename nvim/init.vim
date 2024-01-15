@@ -29,6 +29,8 @@ set background=dark
 let g:everforest_background = 'hard'
 let g:everforest_better_performance = 1
 let g:airline_theme = 'gruvbox'
-let g:ayucolor="light"
+let g:lightline = {
+	\ 'colorscheme' : 'gruvbox_alt',
+	\ }
 
 colorscheme gruvbox
