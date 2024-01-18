@@ -13,7 +13,7 @@ source ~/.config/nvim/mod/plugins.vim
 "config plusings
 source ~/.config/nvim/mod/plugin-config.vim
 
-set background=soft
+set background=light
 
 let g:everforest_background = 'soft'
 let g:everforest_better_performance = 1
