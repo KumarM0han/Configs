@@ -36,9 +36,9 @@ vim.opt.path = ".,**"
 vim.opt.autoindent = true
 vim.opt.timeoutlen = 3000
 
-vim.opt.backupdir = "/nobackup/umacho64/.nvim/backup/"
-vim.opt.directory = "/nobackup/umacho64/.nvim/swap/"
-vim.opt.undodir = "/nobackup/umacho64/.nvim/undo/"
+vim.opt.backupdir = "path"
+vim.opt.directory = "path"
+vim.opt.undodir = "path"
 vim.opt.undofile = true
 
 vim.opt.complete = {}
