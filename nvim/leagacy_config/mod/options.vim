@@ -5,7 +5,7 @@ set nowrap
 set mouse=
 set autowrite
 set hidden
-set autochdir
+"set autochdir
 set hlsearch
 set incsearch
 set ignorecase
@@ -23,6 +23,7 @@ set cmdheight=1
 set scrolloff=2
 set noshowmode
 set backspace=2 " Backspace over newlines
+set laststatus=2 
 
 set tabstop=4
 set shiftwidth=4
@@ -55,7 +56,7 @@ set formatoptions+=q " enable formatting of comments with gq
 set formatoptions+=n " detect lists for formatting
 set formatoptions+=b " auto-wrap in insert mode, and do not wrap old long lines
 
-" Search results centered please
+" Search results at middle please
 nnoremap <silent> n nzz
 nnoremap <silent> N Nzz
 nnoremap <silent> * *zz
@@ -86,3 +87,4 @@ if has("autocmd")
   " https://stackoverflow.com/questions/31449496/vim-ignore-specifc-file-in-autocommand
   au BufReadPost * if expand('%:p') !~# '\m/\.git/' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+

@@ -18,13 +18,11 @@ cnoremap <c-v> <c-r>0
 nnoremap j gj
 nnoremap k gk
 
-map B ^
-map E $
-
 nmap <BS> :noh<CR>
 nmap <leader>s :source ~/.config/nvim/init.vim<CR>
 
 nmap <leader>; :Buffers<CR>
+nmap <leader>. :Marks<Cr>
 "noremap <leader>b :buffers<CR>:buffer 
 "noremap <leader>p :bp<CR>
 "noremap <leader>n :bn<CR>
@@ -34,14 +32,14 @@ nnoremap <leader><leader> <c-^>
 "nmap e $
 
 " you can also use <leader> <num> to switch to tab
-"nmap <C-Right> :tabn<CR>
-"nmap <C-Left> :tabp<CR>
-nmap <C-Right> <nop>
-nmap <C-Left> <nop>
+nmap <C-Right> :tabn<CR>
+nmap <C-Left> :tabp<CR>
+"nmap <C-Right> <nop>
+"nmap <C-Left> <nop>
 
 "move page
-nmap f <C-f><CR>
-nmap b <C-b><CR>
+"nmap f <C-f><CR>
+"nmap b <C-b><CR>
 
 "split window nav
 "nmap <A-Down> <C-w><Down><CR>
@@ -62,25 +60,24 @@ nmap <leader>h <C-w>K<CR>
 nmap <leader>v <C-w>H<CR>
 
 " No arrow keys --- force yourself to use the home row
+nnoremap . <nop>
+
+
 "nnoremap <up> <nop>
 "nnoremap <down> <nop>
-"nnoremap <left> :tabp<CR> 
-"nnoremap <right> :tabn<CR> 
-
-nnoremap . <nop>
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> :tabp<CR> 
-nnoremap <right> :tabn<CR> 
-
-vnoremap <up> <nop>
-vnoremap <down> <nop>
-vnoremap <left> <nop>
-vnoremap <right> <nop>
+"nnoremap <left> <nop>
+"nnoremap <right> <nop>
+""nnoremap <left> :tabp<CR> 
+""nnoremap <right> :tabn<CR> 
+"
+"vnoremap <up> <nop>
+"vnoremap <down> <nop>
+"vnoremap <left> <nop>
+"vnoremap <right> <nop>
 
 "move split windows
-nmap <leader>h <C-w>K<CR>
-nmap <leader>v <C-w>H<CR>
+"nmap <leader>h <C-w>K<CR>
+"nmap <leader>v <C-w>H<CR>
 
 " Go to tab by number
 " gt -> move to next tab

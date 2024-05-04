@@ -50,7 +50,7 @@ function! FindAllTabs()
 		endfor
 		:if found==0
 			:let found=1
-			:tabe %:p:r.h
+			:e %:p:r.h
 		endif
 	 elseif found==0 &&  expand('%:p') =~ '\.h'
 		:let temp = expand('%:p:t:r') . ".cpp
@@ -69,7 +69,7 @@ function! FindAllTabs()
 		endfor
 		:if found==0
 			:let found = 1
-			:tabe %:p:r.cpp
+			:e %:p:r.cpp
 		endif
      	endif
 endfunction

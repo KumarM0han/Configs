@@ -33,29 +33,29 @@ command! -bang -nargs=? -complete=dir Files
 map <C-p> :Files<CR>
 
 
-if executable('rust-analyzer')
-  au User lsp_setup call lsp#register_server({
-        \   'name': 'Rust Language Server',
-        \   'cmd': {server_info->['rust-analyzer']},
-        \   'whitelist': ['rust'],
-        \   'initialization_options': {
-        \     'cargo': {
-        \       'buildScripts': {
-        \         'enable': v:true,
-        \       },
-        \     },
-        \     'procMacro': {
-        \       'enable': v:true,
-        \     },
-        \   },
-        \     'checkOnSave' : v:true,
-        \     'check' : {
-        \     'enable' : v:true,
-        \     'command' : 'clippy',
-        \     'features' : 'all',
-        \     },
-        \ })
-endif
+"if executable('rust-analyzer')
+"  au User lsp_setup call lsp#register_server({
+"        \   'name': 'Rust Language Server',
+"        \   'cmd': {server_info->['rust-analyzer']},
+"        \   'whitelist': ['rust'],
+"        \   'initialization_options': {
+"        \     'cargo': {
+"        \       'buildScripts': {
+"        \         'enable': v:true,
+"        \       },
+"        \     },
+"        \     'procMacro': {
+"        \       'enable': v:true,
+"        \     },
+"        \   },
+"        \     'checkOnSave' : v:true,
+"        \     'check' : {
+"        \     'enable' : v:true,
+"        \     'command' : 'clippy',
+"        \     'features' : 'all',
+"        \     },
+"        \ })
+"endif
 
 let g:lightline = {
       \ 'active': {
@@ -104,3 +104,20 @@ let g:airline_symbols.dirty='⚡'
 let g:rooter_patterns = ['=code']
 "let g:rooter_change_directory_for_non_project_files = ''
 let g:rooter_change_directory_for_non_project_files = 'current'
+
+let g:zig_fmt_autosave = 0
+
+" Disable function highlighting (affects both C and C++ files)
+let g:cpp_function_highlight = 1
+
+" Enable highlighting of C++11 attributes
+let g:cpp_attributes_highlight = 1
+
+" Highlight struct/class member variables (affects both C and C++ files)
+let g:cpp_member_highlight = 1
+
+" Put all standard C and C++ keywords under Vim's highlight group 'Statement'
+" (affects both C and C++ files)
+let g:cpp_simple_highlight = 1
+
+"let g:rustfmt_autosave = 1
