@@ -20,6 +20,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({ 
     {
         'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
     {
         'akinsho/bufferline.nvim', version = "*"
@@ -63,7 +64,7 @@ require("lazy").setup({
 })
 
 vim.o.background = "dark" 
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme everforest")
 
 --require("status")
 --require("tab")

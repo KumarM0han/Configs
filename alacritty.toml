@@ -1,5 +1,5 @@
 import = [
-    "custom.toml"
+    "gruvhard.toml"
 ]
 
 #[env]
@@ -14,9 +14,8 @@ decorations = "Full"
 startup_mode = "Maximized"
 
 [scrolling]
-history = 5000
+history = 1000
 
 [font]
 size = 15
-#normal = { family = "JetBrains Mono", style = "Regular" }
-normal = { family = "Roboto Mono", style = "Medium" }
+normal = { family = "JetBrains Mono", style = "Regular" }

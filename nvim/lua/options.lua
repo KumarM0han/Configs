@@ -50,8 +50,8 @@ vim.opt.complete:append({"u"})
 vim.opt.completeopt = {}
 vim.opt.completeopt:append({"menu"})
 vim.opt.completeopt:append({"preview"})
-vim.opt.completeopt:append({"noinsert"})
-vim.opt.completeopt:append({"noselect"})
+--vim.opt.completeopt:append({"noinsert"})
+--vim.opt.completeopt:append({"noselect"})
 --[[
 vim.opt.complete:remove({"t"})
 vim.opt.complete:remove({"]"})
@@ -71,6 +71,9 @@ vim.opt.diffopt:append({"iwhite"})
 vim.opt.diffopt:append({"filler"})
 vim.opt.diffopt:append({"algorithm:patience"})
 vim.opt.diffopt:append({"indent-heuristic"})
+
+-- zig
+vim.g.zig_fmt_autosave = false
 
 -- Gruvbox options
 vim.g.gruvbox_contrast_light = 'soft'
