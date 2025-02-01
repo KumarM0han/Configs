@@ -9,11 +9,15 @@ require('telescope').setup {
       case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
                                        -- the default case_mode is "smart_case"
     }
-  }
+  },
+  defaults = {
+      layout_strategy = 'horizontal',
+      layout_config = { width = 100, preview_width = 0 },
+  },
 }
 
 require('telescope').load_extension('fzf')
-vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>pg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>th', builtin.help_tags, { desc = 'Telescope help tags' })
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>gg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>b', builtin.buffers, { desc = 'Telescope buffers' })
+--vim.keymap.set('n', '<leader>th', builtin.help_tags, { desc = 'Telescope help tags' })
