@@ -22,20 +22,32 @@ local function UndoFileLocation(Path)
 		os.execute("mkdir -p " .. dir)
 	end
 end
-vim.opt.undodir = UndoFileLocation()
+vim.opt.undodir = UndoFileLocation("/nobackup/umacho64/.nvim/undodir/")
 vim.opt.undofile = true
 vim.opt.backup = false
 
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.cursorline = true
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 2
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "100"
 
 vim.g.mapleader = " "
 
+vim.opt.diffopt = {}
+vim.opt.diffopt:append({"iwhite"})
+vim.opt.diffopt:append({"filler"})
+vim.opt.diffopt:append({"algorithm:patience"})
+vim.opt.diffopt:append({"indent-heuristic"})
+
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.showmode = false
+vim.g.zig_fmt_autosave = false

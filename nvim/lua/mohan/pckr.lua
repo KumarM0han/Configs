@@ -25,14 +25,14 @@ require('pckr').add{
 		'nvim-telescope/telescope.nvim', brach = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	};
-	{ 'rose-pine/neovim' };
-	{ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' };
  	{ 'mbbill/undotree' };
-	{ 'ngemily/vim-vp4' };
-	{ 'neovim/nvim-lspconfig' };
-	{ 'hrsh7th/cmp-nvim-lsp' };
-	{ 'hrsh7th/nvim-cmp' };
-	{ 'hrsh7th/cmp-buffer' };
+    { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' };
     { 'L3MON4D3/LuaSnip' };
-    { 'saadparwaiz1/cmp_luasnip' };
+    { 'neovim/nvim-lspconfig' };
+    { 'hrsh7th/cmp-nvim-lsp' };
+    { 'hrsh7th/nvim-cmp' };
+    { 'hrsh7th/cmp-buffer' };
+    { 'rose-pine/neovim' };
+    { 'morhetz/gruvbox' },
+    { 'nvim-lualine/lualine.nvim' };
 }
