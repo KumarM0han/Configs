@@ -51,3 +51,6 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.showmode = false
 vim.g.zig_fmt_autosave = false
+
+vim.o.background = "light"
+vim.cmd [[colorscheme gruvbox]]
