@@ -27,7 +27,6 @@ vim.keymap.set('n', 'k', 'gk')
 vim.keymap.set('n', '<Leader><Leader>', '<C-^>')
 vim.keymap.set('n', '<C-Right>', vim.cmd.tabn)
 vim.keymap.set('n', '<C-Left>', vim.cmd.tabp)
--- vim.keymap.set('n', '<BS>', vim.cmd.noh)
 
 vim.keymap.set('n', '<Leader><Down>', '<C-w><Down><CR>')
 vim.keymap.set('n', '<Leader><Up>', '<C-w><Up><CR>')
@@ -36,4 +35,4 @@ vim.keymap.set('n', '<Leader><Left>', '<C-w><Left><CR>')
 
 vim.keymap.set('n', '<Leader>i', ':echo expand("%:p")<CR>')
 vim.keymap.set('n', '<Leader>w', ':set wrap!<CR>')
-vim.keymap.set('n', '<BS>', ':noh<CR>')
+vim.keymap.set('n', '<BS>', ':noh<CR>', {silent = true})

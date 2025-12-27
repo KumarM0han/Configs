@@ -1,0 +1,26 @@
+general.import = [
+    #"gruvbox_dark_custom.toml"
+    "themes/everforest_dark.toml"
+]
+
+[env]
+term = "xterm-256color"
+
+[window]
+opacity = 1.00
+blur = true
+padding.x = 2
+padding.y = 2
+decorations = "none"
+dynamic_title = false
+
+[scrolling]
+history = 5000
+
+[font]
+size = 15
+normal = { family = "Google Sans Code", style = "Regular" }
+bold = { style = "" }
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
