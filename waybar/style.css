@@ -1,13 +1,10 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: GoogleSansCode-Regular, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    background-color: #282828;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -15,15 +12,6 @@ window#waybar {
 window#waybar.hidden {
     opacity: 0.2;
 }
-
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
 
 window#waybar.termite {
     background-color: #3F3F3F;
@@ -64,8 +52,8 @@ button:hover {
 }
 
 #workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: #3c3836;
+    box-shadow: inset 0 -3px #d79921;
 }
 
 #workspaces button.urgent {
@@ -73,7 +61,8 @@ button:hover {
 }
 
 #mode {
-    background-color: #64727D;
+    /*background-color: #64727D;*/
+    background-color: rgba(40, 40, 40, 1);
     box-shadow: inset 0 -3px #ffffff;
 }
 
@@ -113,20 +102,6 @@ button:hover {
     margin-right: 0;
 }
 
-#clock {
-    background-color: #64727D;
-}
-
-#battery {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-#battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
-}
-
 @keyframes blink {
     to {
         background-color: #ffffff;
@@ -134,9 +109,14 @@ button:hover {
     }
 }
 
+#battery.charging, #battery.plugged {
+    background-color: #98971a;
+    color: #282828;
+}
+
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
+    background-color: #fb4934;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -150,17 +130,16 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: #f53c3c;
+    background-color: #fb4934;
     color: #ffffff;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #2980b9;
-    color: #ffffff;
+    color: #98971a;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
+    background-color: #b8bb26;
     color: #000000;
 }
 
@@ -168,39 +147,25 @@ label:focus {
     background-color: #000000;
 }
 
+/*
 #cpu {
     background-color: #2ecc71;
     color: #000000;
-}
+}*/
 
-#memory {
-    background-color: #9b59b6;
-}
-
-#disk {
-    background-color: #964B00;
-}
-
-#backlight {
-    background-color: #90b1b1;
-}
-
+/*
 #network {
-    background-color: #2980b9;
+    background-color: #2972b9;
 }
+*/
 
 #network.disconnected {
-    background-color: #f53c3c;
-}
-
-#pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    /*background-color: #fb4934;*/
+    color: #fb4934;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    color: #fb4934;
 }
 
 #wireplumber {
@@ -247,9 +212,10 @@ label:focus {
     background-color: #eb4d4b;
 }
 
+/*
 #idle_inhibitor {
     background-color: #2d3436;
-}
+}*/
 
 #idle_inhibitor.activated {
     background-color: #ecf0f1;
