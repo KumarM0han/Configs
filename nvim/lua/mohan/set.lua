@@ -66,7 +66,7 @@ vim.g.everforest_enable_italic = true;
 
 if vim.o.background == 'dark' then
     vim.g.everforest_background = 'hard'
-    vim.cmd [[colorscheme gruber-darker]]
+    vim.cmd [[colorscheme everforrest]]
 else
     vim.g.everforest_background = 'soft'
     vim.cmd [[colorscheme everforest]]

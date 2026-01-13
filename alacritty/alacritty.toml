@@ -1,4 +1,5 @@
 general.import = [
+    #"themes/gruvbox_dark.toml"
     #"gruvbox_dark_custom.toml"
     "themes/everforest_dark.toml"
 ]
@@ -18,8 +19,10 @@ dynamic_title = false
 history = 5000
 
 [font]
-size = 15
+size = 16
 normal = { family = "Google Sans Code", style = "Regular" }
+#normal = { family = "Noto Sans Mono", style = "Regular" }
+#normal = { family = "RobotoMono", style = "Regular" }
 bold = { style = "" }
 
 [cursor]

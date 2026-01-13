@@ -1,10 +1,10 @@
 * {
-    font-family: GoogleSansCode-Regular, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-family: "Google Sans Code", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 18px;
 }
 
 window#waybar {
-    background-color: #282828;
+    background-color: #272e33; /* Everforest Bg Hard */
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -14,11 +14,11 @@ window#waybar.hidden {
 }
 
 window#waybar.termite {
-    background-color: #3F3F3F;
+    background-color: #2d353b; /* Everforest Bg Medium */
 }
 
 window#waybar.chromium {
-    background-color: #000000;
+    background-color: #1e2326; /* Everforest Bg0 */
     border: none;
 }
 
@@ -33,18 +33,18 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
+    box-shadow: inset 0 -3px #d3c6aa; /* Everforest Fg */
 }
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: #a37800;
+    background-color: #dbbc7f; /* Everforest Yellow */
 }
 
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: #d3c6aa; /* Everforest Fg */
 }
 
 #workspaces button:hover {
@@ -52,18 +52,17 @@ button:hover {
 }
 
 #workspaces button.focused {
-    background-color: #3c3836;
-    box-shadow: inset 0 -3px #d79921;
+    background-color: #3d484d; /* Everforest Bg Visual */
+    box-shadow: inset 0 -3px #a7c080; /* Everforest Green */
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: #e67e80; /* Everforest Red */
 }
 
 #mode {
-    /*background-color: #64727D;*/
-    background-color: rgba(40, 40, 40, 1);
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: rgba(39, 46, 51, 1);
+    box-shadow: inset 0 -3px #d3c6aa;
 }
 
 #clock,
@@ -84,7 +83,7 @@ button:hover {
 #power-profiles-daemon,
 #mpd {
     padding: 0 10px;
-    color: #ffffff;
+    color: #d3c6aa; /* Everforest Fg */
 }
 
 #window,
@@ -104,20 +103,20 @@ button:hover {
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: #d3c6aa;
+        color: #272e33;
     }
 }
 
 #battery.charging, #battery.plugged {
-    background-color: #98971a;
-    color: #282828;
+    background-color: #a7c080; /* Everforest Green */
+    color: #272e33;
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #fb4934;
-    color: #ffffff;
+    background-color: #e67e80; /* Everforest Red */
+    color: #d3c6aa;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -130,77 +129,64 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: #fb4934;
-    color: #ffffff;
+    background-color: #e67e80;
+    color: #d3c6aa;
 }
 
 #power-profiles-daemon.balanced {
-    color: #98971a;
+    color: #a7c080;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #b8bb26;
-    color: #000000;
+    background-color: #83c092; /* Everforest Aqua */
+    color: #272e33;
 }
 
 label:focus {
-    background-color: #000000;
+    background-color: #1e2326;
 }
-
-/*
-#cpu {
-    background-color: #2ecc71;
-    color: #000000;
-}*/
-
-/*
-#network {
-    background-color: #2972b9;
-}
-*/
 
 #network.disconnected {
-    /*background-color: #fb4934;*/
-    color: #fb4934;
+    color: #e67e80;
 }
 
 #pulseaudio.muted {
-    color: #fb4934;
+    color: #e67e80;
 }
 
 #wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
+    background-color: #d3c6aa;
+    color: #272e33;
 }
 
 #wireplumber.muted {
-    background-color: #f53c3c;
+    background-color: #e67e80;
 }
 
 #custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
+    background-color: #a7c080;
+    color: #272e33;
     min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-    background-color: #66cc99;
+    background-color: #a7c080;
 }
 
 #custom-media.custom-vlc {
-    background-color: #ffa000;
+    background-color: #e69875; /* Everforest Orange */
 }
 
 #temperature {
-    background-color: #f0932b;
+    background-color: #e69875;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+    background-color: #e67e80;
 }
 
 #tray {
-    background-color: #2980b9;
+    background-color: #7fbbb3; /* Everforest Blue */
 }
 
 #tray > .passive {
@@ -209,47 +195,42 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: #e67e80;
 }
 
-/*
-#idle_inhibitor {
-    background-color: #2d3436;
-}*/
-
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+    background-color: #d3c6aa;
+    color: #272e33;
 }
 
 #mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
+    background-color: #a7c080;
+    color: #272e33;
 }
 
 #mpd.disconnected {
-    background-color: #f53c3c;
+    background-color: #e67e80;
 }
 
 #mpd.stopped {
-    background-color: #90b1b1;
+    background-color: #859289; /* Everforest Gray */
 }
 
 #mpd.paused {
-    background-color: #51a37a;
+    background-color: #83c092;
 }
 
 #language {
-    background: #00b093;
-    color: #740864;
+    background: #7fbbb3;
+    color: #272e33;
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
 }
 
 #keyboard-state {
-    background: #97e1ad;
-    color: #000000;
+    background: #a7c080;
+    color: #272e33;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
@@ -277,17 +258,17 @@ label:focus {
 
 #privacy-item {
     padding: 0 5px;
-    color: white;
+    color: #d3c6aa;
 }
 
 #privacy-item.screenshare {
-    background-color: #cf5700;
+    background-color: #e69875;
 }
 
 #privacy-item.audio-in {
-    background-color: #1ca000;
+    background-color: #a7c080;
 }
 
 #privacy-item.audio-out {
-    background-color: #0069d4;
+    background-color: #7fbbb3;
 }
