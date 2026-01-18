@@ -29,4 +29,5 @@ require('pckr').add{
     { "blazkowolf/gruber-darker.nvim" };
     { 'sainnhe/everforest' };
     { 'nvim-lualine/lualine.nvim' };
+    { "whizikxd/naysayer-colors.nvim" };
 }

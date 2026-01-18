@@ -1,7 +1,6 @@
 general.import = [
     #"themes/gruvbox_dark.toml"
-    #"gruvbox_dark_custom.toml"
-    "themes/everforest_dark.toml"
+    "themes/jblow.toml"
 ]
 
 [env]

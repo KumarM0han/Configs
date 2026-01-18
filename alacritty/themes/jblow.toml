@@ -1,0 +1,28 @@
+[colors.primary]
+background = '#062321' # The "Deep Swamp" base
+foreground = '#d1bda3' # Warm parchment text
+
+[colors.cursor]
+text = '#062321'
+cursor = '#eeeeee' # Blow often uses a simple high-contrast block cursor
+
+[colors.normal]
+black   = '#000000'
+red     = '#8c3535' # Muted, blood red
+green   = '#44b340' # Vibrant, "toxic" green
+yellow  = '#e5b567' # The iconic mustard yellow
+blue    = '#4c7a8d' # Desaturated slate blue
+magenta = '#825a82' # Dusty plum
+cyan    = '#70a0a0' # Sage teal
+white   = '#d1bda3'
+
+[colors.bright]
+black   = '#313131'
+red     = '#cc5555'
+green   = '#7ccd78'
+yellow  = '#ffe59e'
+blue    = '#72aaca'
+magenta = '#cba3c1'
+cyan    = '#98d1ce'
+white   = '#ffffff'
+
